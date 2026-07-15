@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+debt_relief.db
+.env
+venv/

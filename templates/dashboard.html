@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Financial Health Dashboard</title>
+<style>
+  body { font-family: 'Segoe UI', Arial, sans-serif; background: #0f172a; color: #e2e8f0; margin:0; }
+  .container { max-width: 1000px; margin: 40px auto; background: #1e293b; padding: 30px 40px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.4); }
+  h1 { color: #38bdf8; }
+  table { width: 100%; border-collapse: collapse; margin-top: 20px; font-size: 13px; }
+  th, td { padding: 10px 12px; text-align: left; border-bottom: 1px solid #334155; }
+  th { color: #94a3b8; text-transform: uppercase; font-size: 11px; }
+  .stress-High { color: #f87171; font-weight: bold; }
+  .stress-Moderate { color: #fbbf24; font-weight: bold; }
+  .stress-Low { color: #4ade80; font-weight: bold; }
+  a.back { display:inline-block; margin-top: 24px; color: #38bdf8; text-decoration: none; }
+  .empty { color: #64748b; margin-top: 20px; }
+</style>
+</head>
+<body>
+  <div class="container">
+    <h1>📈 Financial Health & Negotiation History Dashboard</h1>
+    {% if loans %}
+    <table>
+      <tr>
+        <th>#</th><th>Outstanding</th><th>EMI</th><th>Overdue Days</th><th>Income</th>
+        <th>EMI Ratio</th><th>Surplus</th><th>Stress</th><th>Settlement %</th><th>Settlement Amt</th><th>Date</th>
+      </tr>
+      {% for loan in loans %}
+      <tr>
+        <td>{{ loan[0] }}</td>
+        <td>Rs.{{ "%.0f"|format(loan[1]) }}</td>
+        <td>Rs.{{ "%.0f"|format(loan[2]) }}</td>
+        <td>{{ loan[3] }}</td>
+        <td>Rs.{{ "%.0f"|format(loan[4]) }}</td>
+        <td>{{ loan[5] }}%</td>
+        <td>Rs.{{ loan[6] }}</td>
+        <td class="stress-{{ loan[7] }}">{{ loan[7] }}</td>
+        <td>{{ loan[8] }}%</td>
+        <td>Rs.{{ "%.0f"|format(loan[9]) }}</td>
+        <td>{{ loan[11][:16] }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+    {% else %}
+    <p class="empty">No loans analyzed yet. Go add one!</p>
+    {% endif %}
+    <a class="back" href="/">← Back to Home</a>
+  </div>
+</body>
+</html>

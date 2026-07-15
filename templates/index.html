@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>AI Powered Debt Relief & Financial Recovery Platform</title>
+<style>
+  body { font-family: 'Segoe UI', Arial, sans-serif; background: #0f172a; color: #e2e8f0; margin:0; }
+  .container { max-width: 640px; margin: 40px auto; background: #1e293b; padding: 30px 40px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.4); }
+  h1 { color: #38bdf8; font-size: 24px; margin-bottom: 4px; }
+  p.subtitle { color: #94a3b8; margin-top: 0; margin-bottom: 24px; }
+  label { display: block; margin-top: 16px; margin-bottom: 6px; font-size: 14px; color: #cbd5e1; }
+  input { width: 100%; padding: 10px 12px; border-radius: 8px; border: 1px solid #334155; background: #0f172a; color: #f1f5f9; box-sizing: border-box; font-size: 14px; }
+  input:focus { outline: none; border-color: #38bdf8; }
+  button { margin-top: 26px; width: 100%; padding: 12px; background: linear-gradient(90deg,#38bdf8,#818cf8); border: none; border-radius: 8px; color: #0f172a; font-weight: bold; font-size: 15px; cursor: pointer; }
+  button:hover { opacity: 0.9; }
+  .nav { text-align: right; max-width: 640px; margin: 20px auto -20px; }
+  .nav a { color: #38bdf8; text-decoration: none; font-size: 14px; }
+</style>
+</head>
+<body>
+  <div class="nav"><a href="/dashboard">View Dashboard →</a></div>
+  <div class="container">
+    <h1>💳 AI Powered Debt Relief & Financial Recovery Platform</h1>
+    <p class="subtitle">Enter your loan details to get an AI-powered settlement recommendation and negotiation letter.</p>
+    <form action="/recommend" method="post">
+      <label>Lender Name</label>
+      <input type="text" name="lender_name" placeholder="e.g. XYZ Bank" value="XYZ Bank">
+
+      <label>Outstanding Loan Amount (Rs.)</label>
+      <input type="number" step="0.01" name="outstanding_amount" required placeholder="e.g. 250000">
+
+      <label>Current EMI (Rs.)</label>
+      <input type="number" step="0.01" name="emi" required placeholder="e.g. 12000">
+
+      <label>Overdue Duration (days)</label>
+      <input type="number" name="overdue_days" required placeholder="e.g. 45">
+
+      <label>Monthly Income (Rs.)</label>
+      <input type="number" step="0.01" name="monthly_income" required placeholder="e.g. 30000">
+
+      <button type="submit">🔍 Analyze & Generate Recommendation</button>
+    </form>
+  </div>
+</body>
+</html>

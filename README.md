@@ -49,7 +49,7 @@ debt-relief-platform/
 ```
 
 ## Demo Video
-📹 [Watch the demo here](ADD_YOUR_VIDEO_LINK_HERE)
+📹 [Watch the demo here](https://drive.google.com/file/d/1OE5PPYnmXsopkf_1EK8_hMi-8upI4z5A/view?usp=drive_link)
 
 ## Skills Applied
 Python, FastAPI, SQLite, Generative AI, Responsible AI, LLMs, Prompt
@@ -57,6 +57,7 @@ Engineering, Gemini AI, API Integration, Cloud Computing
 
 ## Smartbridge Project — Team
 - Naredla Greeshma Reddy (Team Lead)
+- Poojitha Garikapati
 - Donthagani Srikanth
 - Kongitala Harshitha
 - Kadiyala Madhuri
